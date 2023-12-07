@@ -27,8 +27,21 @@ Session(app)
 def index():
     return "Project 1: TODO - deze stap uitwerken"
 
-@app.route("/>", methods=["GET"])
+@app.route("/twopeople>", methods=["GET"])
 def exercise(twopeople):
        
     db.commit()
-    return render_template("exercise.html")
+    return render_template("exercisestwo.html")
+
+@app.route("/threepeople>", methods=["GET"])
+def exercise(threepeople):
+       
+    db.commit()
+    return render_template("exercisesthree.html")
+
+@app.route("/fourpeople>", methods=["GET"])
+def exercise(fourpeople):
+       
+    db.commit()
+    return render_template("exercisesfour.html")
+
